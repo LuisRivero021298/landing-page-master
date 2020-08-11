@@ -4,6 +4,19 @@ body, html {
 	font-family: 'Public Sans', sans-serif;
 	font-size: 18px;
 }
+:root {
+	/***** COLORS *****/
+	/* Primary */
+	--dark-blue: hsl(233, 26%, 24%);
+	--lime-green: hsl(136, 65%, 51%);
+	--bright-cyan: hsl(192, 70%, 51%);
+	/* Neutral */
+	--grayish-blue: hsl(233, 8%, 62%);
+	--light-grayish-blue: hsl(220, 16%, 96%);
+	--very-light-gray: hsl(0, 0%, 98%);
+	--white: hsl(0, 0%, 100%);
+}
+/***** HEADER *****/
 .main-header {
 	width: auto;
 	height: 30px;
@@ -11,6 +24,9 @@ body, html {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	z-index: 1;
+	background-color: var(--white);
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 .main-header .logo-container {
 	height: auto;
@@ -45,4 +61,50 @@ body, html {
 .main-header nav.menu-mobile-active {
 	left: 10px;
 	right: 10px;
+}
+
+/**** MAIN ****/
+#primary-section{
+	width: 100%;
+	min-height: 300px;
+	text-align: center;
+}
+#primary-section .bg-mc {
+	width: auto;
+	height: 350px;
+	position: relative;
+	top: -40px;
+	background-image: url('../images/bg-intro-mobile.svg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+}
+#primary-section .bg-mc img{
+	width: 95%;
+	height: 100%;
+	object-fit: cover;
+	object-position: bottom;
+}
+#primary-section h1 {
+	margin: -15px auto 20px;
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--dark-blue);
+}
+#primary-section .primary-info{
+	width: 85%;
+	margin: 0 auto;
+	font-size: .8rem;
+	color: var(--grayish-blue);
+}
+#primary-section .primary-btn{
+	display: inline-block;
+	font-size: .8rem;
+	margin: 30px auto;
+	padding: 15px 32px;
+	border-radius: 50px;
+	text-decoration: none;
+	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+	color: var(--white);
 }
