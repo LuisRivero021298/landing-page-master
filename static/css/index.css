@@ -64,10 +64,15 @@ body, html {
 }
 
 /**** MAIN ****/
+main{
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+}
 #primary-section{
 	width: 100%;
 	min-height: 300px;
-	text-align: center;
+	padding-bottom: 40px;
 }
 #primary-section .bg-mc {
 	width: auto;
@@ -92,11 +97,12 @@ body, html {
 	font-weight: 400;
 	color: var(--dark-blue);
 }
-#primary-section .primary-info{
+.section-description{
 	width: 85%;
 	margin: 0 auto;
 	font-size: .8rem;
 	color: var(--grayish-blue);
+	line-height: 1.6em;
 }
 #primary-section .primary-btn{
 	display: inline-block;
@@ -107,4 +113,30 @@ body, html {
 	text-decoration: none;
 	background: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
 	color: var(--white);
+}
+
+/**/
+.featured-section{
+	background-color: var(--light-grayish-blue);
+	padding: 70px 0;	
+}
+.grid-items{
+	padding-top: 25px;
+	display: grid;
+	gap: 25px;
+}
+.title-l2,
+.title-l3{
+	color: var(--dark-blue);
+	font-size: 1.8rem;
+	font-weight: 400;
+	width: 85%;
+	margin: 0 auto 20px;
+}
+.title-l3{
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+}
+.featured-item img{
+	margin-bottom: 15px;
 }
