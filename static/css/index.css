@@ -23,6 +23,7 @@ body, html {
 	padding: 10px 15px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	position: relative;
 	z-index: 1;
 	background-color: var(--white);
@@ -33,6 +34,9 @@ body, html {
 	display: flex;
   justify-content: center;
   align-items: center;
+}
+.main-header .primary-btn{
+	display: none;
 }
 .main-header #menu-desktop {
 	display: none;
@@ -221,4 +225,123 @@ footer .attribution{
 .attribution a{
 	color: var(--white);
 	font-weight: 700;
+}
+
+/****** RESPONSIVE ******/
+@media only screen and (min-width: 768px){
+	body, html{
+		font-size: 22px;	
+	}
+	#primary-section .bg-mc img{
+		width: 80%;
+		object-position: center;
+	}
+	.lasted-grid{
+		gap: 30px;
+	}
+	.last-art img {
+		height: 230px;
+	}
+	.lasted-info{
+		padding: 30px 40px;
+	}
+} 
+
+@media only screen and (min-width: 1024px){
+	body, html{
+		font-size: 25px;	
+	}
+	.main-header{
+		height: 40px;
+	}
+	.main-header .primary-btn{
+		display: initial;
+	}
+	.social-list img{
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media only screen and (min-width: 1100px){
+	body, html{
+		font-size: 20px;	
+	}
+	.main-header{
+		height: 50px;
+		justify-content: space-around;
+	}
+	.main-header #menu-burger,
+	.main-header #menu-mobile {
+		display: none;
+	}
+	.main-header #menu-desktop {
+		display: initial;
+	}
+	.main-header #menu-desktop ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		align-items: center;
+	}
+	.main-header #menu-desktop ul li {
+		padding: 10px;
+		font-size: .9rem;
+		list-style: none;
+		color: var(--grayish-blue);
+	}
+	.main-header .primary-btn{
+		margin: 0;
+	}
+
+	/**/
+	main{
+		text-align: left;
+	}
+	#primary-section{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		padding-bottom: 0;
+	}
+	#primary-section div{
+		width: 49%;
+		box-sizing: border-box;
+	}
+	#primary-section .bg-mc {
+		overflow: hidden;
+		width: 51%;
+		box-sizing: border-box;
+		background-image: url('../images/bg-intro-desktop.svg');
+		background-repeat: no-repeat;
+		background-size: inherit;
+		background-position: 12% 55%;
+		position: relative;
+		top:0;
+		height: 100vh;
+	}
+	#primary-section .bg-mc img{
+		width: auto;
+		height: 140%;
+		position: relative;
+		top: -20%;
+		right: -15%;
+	}
+	#primary-section .p-l{
+		padding-left: 100px;
+	}
+	#primary-section .p-l{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	#primary-section .p-l h1,
+	#primary-section .p-l p{
+		margin: 0;
+		padding: 10px 0;
+	}
+	#primary-section .p-l .primary-btn {
+		margin: 20px 0;
+	}
 }
