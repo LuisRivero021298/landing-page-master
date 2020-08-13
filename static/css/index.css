@@ -46,28 +46,50 @@ body, html {
 }
 .main-header #menu-mobile {
 	position: fixed;
-	top: 50px; 
-	background-color: #FFF;
-	padding:20px 10px;
-	z-index: 1;
+	top: 50px;
+	bottom: 0;
+	background: linear-gradient(180deg, black, transparent);
+	z-index: -1;
 	display: flex;
 	justify-content: center;
-	border-radius: 5px;
+}
+.main-header .icon-show{
+	display: flex;
+}
+.main-header .icon-hidden {
+	display: none;
 }
 .main-header #menu-mobile ul {
-	margin: 0;
-	padding:0;
+	position: relative;
+	transition-property: all;
+	-webkit-transition-property: all;
+	transition: .4s;
+	-webkit-transition: .4s;
+	padding: 20px 0;
+	width: 90%;
+	background: #fff;
+	border-radius: 5px;
+	height: fit-content;
+	text-align: center;
 }
 .main-header #menu-mobile li {
 	list-style: none;
-	padding: 10px 0;
+	padding: 12px 0;
 }
 .main-header nav.menu-mobile-hidden{
-	right: -100vw;
+	left: -100px;
+	opacity: 0;
+}
+.main-header nav.menu-mobile-hidden ul{
+	right: -100vh;
 }
 .main-header nav.menu-mobile-active {
-	left: 10px;
-	right: 10px;
+	left: 0px;
+	right: 0px;
+	opacity: 1;
+}
+.main-header nav.menu-mobile-active ul {
+	right: 0px;
 }
 
 /**** MAIN ****/
@@ -270,20 +292,8 @@ footer .attribution{
 	body, html{
 		font-size: 25px;	
 	}
-	.main-header{
-		height: 40px;
-	}
 	.main-header .primary-btn{
-		display: initial;
-	}
-	footer .social-list li svg path{
-		font-size: 50px;
-	}
-}
-
-@media only screen and (min-width: 1070px){
-	body, html{
-		font-size: 20px;	
+		margin: 0;
 	}
 	.main-header{
 		height: 50px;
@@ -322,7 +332,16 @@ footer .attribution{
 		color: var(--dark-blue);
 	}
 	.main-header .primary-btn{
-		margin: 0;
+		display: initial;
+	}
+	footer .social-list li svg path{
+		font-size: 50px;
+	}
+}
+
+@media only screen and (min-width: 1070px){
+	body, html{
+		font-size: 20px;	
 	}
 
 	/**/
