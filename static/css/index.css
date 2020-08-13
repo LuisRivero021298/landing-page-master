@@ -161,12 +161,13 @@ main{
 	grid-template-columns: 1fr;
 	gap: 20px;
 	text-align: left;
+	width: 85%;
+	margin: 0 auto
 }
 .last-art{
-	width: 85%;
+	width: auto;
 	background-color: var(--white);
 	border-radius: 5px;
-	margin: 0 auto;
 	box-shadow: 0 1px 10px rgba(0,0,0,.06);
 }
 .last-art img{
@@ -263,7 +264,7 @@ footer .attribution{
 	}
 }
 
-@media only screen and (min-width: 1100px){
+@media only screen and (min-width: 1070px){
 	body, html{
 		font-size: 20px;	
 	}
@@ -297,6 +298,7 @@ footer .attribution{
 	/**/
 	main{
 		text-align: left;
+		overflow: hidden;
 	}
 	#primary-section{
 		display: flex;
@@ -309,7 +311,6 @@ footer .attribution{
 		box-sizing: border-box;
 	}
 	#primary-section .bg-mc {
-		overflow: hidden;
 		width: 51%;
 		box-sizing: border-box;
 		background-image: url('../images/bg-intro-desktop.svg');
@@ -328,7 +329,7 @@ footer .attribution{
 		right: -15%;
 	}
 	#primary-section .p-l{
-		padding-left: 100px;
+		padding-left: 5%;
 	}
 	#primary-section .p-l{
 		display: flex;
@@ -344,4 +345,66 @@ footer .attribution{
 	#primary-section .p-l .primary-btn {
 		margin: 20px 0;
 	}
+	/**/
+	.title-l2, .title-l3, .title-l4{
+		width: 90%;
+	}
+	.featured-section > .section-description{
+		width: 50%;
+		margin-left: 5%;
+	}
+	.grid-items,
+	.lasted-grid{
+		width: 90%;
+		margin: 20px auto 0;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 15px;
+	}
+	.featured-item .section-description,
+	.featured-item .title-l3 {
+		margin-left: 0;
+	}
+
+	/*** FOOTER ***/
+	footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "ar-1 ar-2 ar-3"
+												 "attribution attribution attribution";
+		text-align: left;
+	}
+	.ar-1, .ar-2, .ar-3{
+		padding: 35px 0;
+	}
+	.ar-1{
+		grid-area: ar-1;
+		padding-left: 100px;
+	}
+	footer .social-list{
+		justify-content: flex-start;
+	}
+	.ar-2{
+		grid-area: ar-2;
+	}
+	.ar-2 ul {
+		margin-top: 0;
+		display: flex;
+		justify-content: space-around;
+	}
+	.ar-3{
+		padding-right: 100px;
+		grid-area: ar-3;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+    align-items: flex-end;
+	}
+	.ar-3 .primary-btn{
+		margin: 0;
+	}
+	.attribution{
+		grid-area: attribution;
+		text-align: center;
+	}
+
 }
