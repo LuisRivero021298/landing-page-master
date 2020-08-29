@@ -3,9 +3,9 @@ Frontend mentor challenge.
 
 ## Result 🚀
   ### Desktop 🚀
-  ![Screenshot](docs/screenshot/desktop.png) 
+  ![Screenshot](docs/screenshots/desktop.png) 
   ### Mobile 🚀
-  ![Screenshot](docs/screenshot/mobile.png) 
+  ![Screenshot](docs/screenshots/mobile.png) 
 ## Author ✒️
 
 * **Luis Rivero** - [LuisRivero021298](https://github.com/LuisRivero021298)
